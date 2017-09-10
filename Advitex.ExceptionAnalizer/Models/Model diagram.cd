@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Advitex.ExceptionAnalizer.Models.ExceptionInfo">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="_descriptionParams" Hidden="true" />
+      <Field Name="NameMark" Hidden="true" />
+      <Method Name="ParseDescriptionParameters" Hidden="true" />
+      <Method Name="ParseParametersByMask" Hidden="true" />
+      <Field Name="ValueMark" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEAAAEEAQACABAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Models\ExceptionInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DescriptionParams" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Advitex.ExceptionAnalizer.Models.ExceptionDescriptionParam">
+    <Position X="4.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\ExceptionDescriptionParam.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Advitex.ExceptionAnalizer.Models.ThrownException">
+    <Position X="1.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAEAAAAEAAgAAAAAABAAAAAEAAAAIA=</HashCode>
+      <FileName>Models\ThrownException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Advitex.ExceptionAnalizer.Models.DescriptionParamType">
+    <Position X="5.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DescriptionParamType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

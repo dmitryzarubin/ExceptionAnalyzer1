@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04E61322-276C-4308-8A4E-5C5EFB4CBB3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advitex.ExceptionAnalizer</RootNamespace>
+    <AssemblyName>Advitex.ExceptionAnalizer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Platform.ReSharper.ComponentModel">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.DocumentManager">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.DocumentManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.DocumentModel">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.DocumentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Metadata">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.ProjectModel">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.ProjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Shell">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.TextControl">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.TextControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.UI">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Util">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.Platform.ReSharper.Util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Daemon">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Daemon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Daemon.CSharp">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Daemon.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Daemon.Engine">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Daemon.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Feature.Services.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services.CSharp">
+      <HintPath>..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Feature.Services.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services.Navigation">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Feature.Services.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Intentions">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Intentions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.LiveTemplates">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.LiveTemplates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Psi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.CSharp">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Psi.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Xml">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Psi.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Resources">
+      <HintPath>..\..\..\..\Program Files\JetBrains\ReSharper\v7.1\SDK\Bin\JetBrains.ReSharper.Resources.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\RethrowStatusEnum.cs" />
+    <Compile Include="Resharper\Highlightings\ThrownExceptionOfTypeExceptionHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\ReThrowWithoutFullCallStackHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\PossibleNotDocumentedArgumentNullExceptionHighlighting.cs" />
+    <Compile Include="Resharper\Specifications\NotRecognizedExceptionTypeSpecification.cs" />
+    <Compile Include="Resharper\Specifications\StrongDocumentedExceptionSpecification.cs" />
+    <Compile Include="Resharper\Specifications\IsCatchedExceptionSpecification.cs" />
+    <Compile Include="Resharper\Specifications\WeakDocumentedExceptionSpecification.cs" />
+    <Compile Include="ThrowDescriptionAttribute.cs" />
+    <Compile Include="ExceptionContractAttribute.cs" />
+    <Compile Include="Models\Argument.cs" />
+    <Compile Include="Models\ExceptionInfo.cs" />
+    <Compile Include="Models\ExceptionDescriptionParam.cs" />
+    <Compile Include="Models\DescriptionParamType.cs" />
+    <Compile Include="Models\IExceptionSource.cs" />
+    <Compile Include="Resharper\Highlightings\PossibleNotDocumentedExceptionHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\PossibleNotDocumentedThrowHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\NotDocumentedExceptionHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\DocumentedExceptionTypeIsNotRecognizedHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\DocumentedExceptionIsNotThrownHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\ReThrowWithoutInnerExceptionHighlighting.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="ModelConstructors\ObjectCreationModelConstructor.cs" />
+    <Compile Include="Models\InClassMemberModels\ObjectCreationModel.cs" />
+    <Compile Include="Resharper\Analizers\ClassMemberAnalizer.cs" />
+    <Compile Include="Resharper\Analizers\ObjectCreationAnalizer.cs" />
+    <Compile Include="Resharper\Analizers\ReferenceExpressionAnalizer.cs" />
+    <Compile Include="Resharper\Highlightings\UncatchedThrowInDestructorHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\UncatchedExceptionInDestructorHighlighting.cs" />
+    <Compile Include="Models\Abstract\AbstractTypeModel.cs" />
+    <Compile Include="Models\ClassMemberModels\DestructorDeclarationModel.cs" />
+    <Compile Include="Models\ThrownException.cs" />
+    <Compile Include="Resharper\QuickFixes\AddClassMemberExceptionIntoDocumentationFix.cs" />
+    <Compile Include="Resharper\Highlightings\NotDocumentedArgumentNullExceptionHighlighting.cs" />
+    <Compile Include="Resharper\Highlightings\NotDocumentedThrowHighlighting.cs" />
+    <Compile Include="ModelConstructors\ClassMemberModelConstructor.cs" />
+    <Compile Include="ModelConstructors\CallModelConstructor.cs" />
+    <Compile Include="ModelConstructors\ThrowModelConstructor.cs" />
+    <Compile Include="Models\Abstract\BaseCallModel.cs" />
+    <Compile Include="Models\Abstract\AbstractTypeMemberModel.cs" />
+    <Compile Include="Models\Abstract\AbstractInMemberModel.cs" />
+    <Compile Include="Models\CatchStatusEnum.cs" />
+    <Compile Include="Models\InClassMemberModels\PropertyCallModel.cs" />
+    <Compile Include="Models\InClassMemberModels\MethodCallModel.cs" />
+    <Compile Include="AbstractModelConstructor.cs" />
+    <Compile Include="ModelFactory.cs" />
+    <Compile Include="Utils\ThrowHelper.cs" />
+    <Compile Include="Models\XmlDocumentationModels\ClassMemberXmlDocumentation.cs" />
+    <Compile Include="Models\ClassMemberModels\ConstructorDeclarationModel.cs" />
+    <Compile Include="Models\ClassMemberModels\PropertyDeclarationModel.cs" />
+    <Compile Include="Utils\PsiTreeHelper.cs" />
+    <Compile Include="Models\Abstract\AbstractCodeModel.cs" />
+    <Compile Include="Models\ClassMemberModels\MethodDeclarationModel.cs" />
+    <Compile Include="Models\InClassMemberModels\ThrowModel.cs" />
+    <Compile Include="Models\XmlDocumentationModels\XmlDocException.cs" />
+    <Compile Include="Resharper\Analizers\ThrowStatementAnalizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resharper\QuickFixes\AddThrowStatementIntoDocumentationFix.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Model diagram.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
